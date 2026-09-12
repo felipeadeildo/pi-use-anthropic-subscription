@@ -1,5 +1,11 @@
 # pi-claude-max
 
+## 1.1.1
+
+### Patch Changes
+
+- [#5](https://github.com/bradennss/pi-claude-max/pull/5) [`b4a01ff`](https://github.com/bradennss/pi-claude-max/commit/b4a01ff7e02422222965fe5d41d20aaf1fbe3183) Thanks [@bradennss](https://github.com/bradennss)! - Reword the description to say the extension consumes Claude Pro/Max subscription usage.
+
 ## 1.1.0
 
 ### Minor Changes
