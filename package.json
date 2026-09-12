@@ -1,7 +1,7 @@
 {
   "name": "pi-claude-max",
   "version": "1.1.0",
-  "description": "Pi extension that routes Anthropic OAuth requests through your Claude Pro/Max subscription instead of extra usage.",
+  "description": "Pi extension that consumes Claude Pro/Max subscription usage instead of extra usage.",
   "type": "module",
   "license": "MIT",
   "author": "Braden Lamb <hi@braden.lol>",

@@ -1,6 +1,6 @@
 # pi-claude-max
 
-A [Pi](https://pi.dev) extension that routes Anthropic OAuth requests through a Claude Pro/Max subscription instead of pay-per-token extra usage. The extension makes Pi identify to the Anthropic API the way the official Claude Code CLI does.
+A [Pi](https://pi.dev) extension that consumes Claude Pro/Max subscription usage instead of extra usage.
 
 ## Verify
 
