@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 
-export const DEFAULT_CLAUDE_CODE_VERSION = "2.1.211";
+export const DEFAULT_CLAUDE_CODE_VERSION = "2.1.280";
 
 export const CLAUDE_CODE_IDENTITY =
   "You are Claude Code, Anthropic's official CLI for Claude.";

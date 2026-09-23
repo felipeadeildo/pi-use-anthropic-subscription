@@ -48,10 +48,10 @@ test("relocateSystemToUser keeps only attribution + identity in system", () => {
   const messages = [
     { role: "user", content: "Reply with the single word: pong" },
   ];
-  const { system } = relocateSystemToUser(oauthSystem, messages, "2.1.211");
+  const { system } = relocateSystemToUser(oauthSystem, messages, "2.1.280");
   expect(system.length).toBe(2);
   expect(system[0].text).toBe(
-    "x-anthropic-billing-header: cc_version=2.1.211.f82; cc_entrypoint=cli;",
+    "x-anthropic-billing-header: cc_version=2.1.280.3a6; cc_entrypoint=cli;",
   );
   expect(system[0].cache_control).toBeUndefined();
   expect(system[1].text).toBe(CLAUDE_CODE_IDENTITY);
@@ -62,7 +62,7 @@ test("relocateSystemToUser prepends the harness prompt to string user content", 
   const { messages } = relocateSystemToUser(
     oauthSystem,
     [{ role: "user", content: "do the thing" }],
-    "2.1.211",
+    "2.1.280",
   );
   expect(messages.length).toBe(1);
   expect(messages[0].content).toBe(
@@ -74,7 +74,7 @@ test("relocateSystemToUser unshifts a block into array user content", () => {
   const { messages } = relocateSystemToUser(
     oauthSystem,
     [{ role: "user", content: [{ type: "text", text: "do the thing" }] }],
-    "2.1.211",
+    "2.1.280",
   );
   const content = messages[0].content as { type?: string; text?: string }[];
   expect(content.length).toBe(2);
@@ -89,7 +89,7 @@ test("relocateSystemToUser leaves messages untouched when there is no user syste
   const { system, messages } = relocateSystemToUser(
     single,
     [{ role: "user", content: "x" }],
-    "2.1.211",
+    "2.1.280",
   );
   expect(system.length).toBe(2);
   expect(system[1].text).toBe(CLAUDE_CODE_IDENTITY);
@@ -97,7 +97,7 @@ test("relocateSystemToUser leaves messages untouched when there is no user syste
 });
 
 test("relocateSystemToUser creates a user message when none exists", () => {
-  const { messages } = relocateSystemToUser(oauthSystem, [], "2.1.211");
+  const { messages } = relocateSystemToUser(oauthSystem, [], "2.1.280");
   expect(messages.length).toBe(1);
   expect(messages[0].role).toBe("user");
   expect(messages[0].content).toBe(
